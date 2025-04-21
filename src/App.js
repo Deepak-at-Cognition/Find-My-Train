@@ -1,83 +1,87 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
+import { ArrowRight, Search, Wifi, Ban, Sparkles } from 'lucide-react';
 
 function App() {
-  const [trains, setTrains] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const mockTrains = [
-      { id: 1, name: 'Express 101', from: 'New York', to: 'Boston', departure: '08:00', arrival: '12:30', status: 'On Time' },
-      { id: 2, name: 'Local 202', from: 'Boston', to: 'Providence', departure: '09:15', arrival: '10:45', status: 'Delayed' },
-      { id: 3, name: 'Bullet 303', from: 'Washington DC', to: 'Philadelphia', departure: '10:30', arrival: '12:00', status: 'On Time' },
-      { id: 4, name: 'Regional 404', from: 'Philadelphia', to: 'New York', departure: '11:45', arrival: '13:30', status: 'On Time' },
-      { id: 5, name: 'Express 505', from: 'Chicago', to: 'Detroit', departure: '13:00', arrival: '16:15', status: 'Cancelled' },
-    ];
-    
-    setTrains(mockTrains);
-  }, []);
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const filteredTrains = trains.filter(train => 
-    train.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    train.from.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    train.to.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Find My Train</h1>
-        <p>Track your train status and schedule</p>
-      </header>
-      
-      <main className="App-main">
-        <div className="search-container">
-          <input 
-            type="text" 
-            placeholder="Search by train name or station..." 
-            value={searchTerm}
-            onChange={handleSearch}
-            className="search-input"
-          />
+      <div className="hero-section">
+        <div className="content-container">
+          <h1 className="hero-title">Find Your Train, <span className="highlight">Effortlessly</span></h1>
+          <p className="hero-subtitle">
+            The smartest way to track trains without the hassle. No ads, just pure functionality.
+          </p>
+          
+          <div className="features-container">
+            <div className="feature-card">
+              <div className="feature-icon">
+                <Search size={24} />
+              </div>
+              <div className="feature-content">
+                <h3>Smart Search</h3>
+                <p>Find any train by name, number, or origin-destination stations in seconds.</p>
+              </div>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon">
+                <Wifi size={24} />
+              </div>
+              <div className="feature-content">
+                <h3>Offline Ready</h3>
+                <p>Access all information offline, except live status. Perfect for your journey.</p>
+              </div>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon">
+                <Ban size={24} />
+              </div>
+              <div className="feature-content">
+                <h3>Zero Ads</h3>
+                <p>Absolutely no advertisements. Ever. We respect your time and attention.</p>
+              </div>
+            </div>
+            
+            <div className="feature-card">
+              <div className="feature-icon">
+                <Sparkles size={24} />
+              </div>
+              <div className="feature-content">
+                <h3>Modern UI</h3>
+                <p>Sleek, intuitive design that makes finding train information a pleasure.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="cta-container">
+            <button className="cta-button">
+              Download Now <ArrowRight size={16} className="arrow-icon" />
+            </button>
+            <p className="cta-subtext">Join thousands of travelers who've simplified their journey</p>
+          </div>
         </div>
         
-        <div className="trains-container">
-          <h2>Train Schedule</h2>
-          {loading ? (
-            <p>Loading trains...</p>
-          ) : (
-            <table className="trains-table">
-              <thead>
-                <tr>
-                  <th>Train</th>
-                  <th>From</th>
-                  <th>To</th>
-                  <th>Departure</th>
-                  <th>Arrival</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredTrains.map(train => (
-                  <tr key={train.id} className={`status-${train.status.toLowerCase().replace(' ', '-')}`}>
-                    <td>{train.name}</td>
-                    <td>{train.from}</td>
-                    <td>{train.to}</td>
-                    <td>{train.departure}</td>
-                    <td>{train.arrival}</td>
-                    <td>{train.status}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
+        <div className="app-image-container">
+          <img src="/app-screenshot.png" alt="Find My Train App Screenshot" className="app-screenshot" />
         </div>
-      </main>
+      </div>
+      
+      <div className="testimonial-section">
+        <div className="testimonial-container">
+          <h2>What Our Users Say</h2>
+          <div className="testimonials">
+            <div className="testimonial-card">
+              <p>"Finally, a train app without annoying ads! The offline feature is a lifesaver when I'm traveling through areas with poor connectivity."</p>
+              <p className="testimonial-author">- Rahul S.</p>
+            </div>
+            <div className="testimonial-card">
+              <p>"The UI is so clean and intuitive. I can find my train in seconds, and all the information I need is right there."</p>
+              <p className="testimonial-author">- Priya M.</p>
+            </div>
+          </div>
+        </div>
+      </div>
       
       <footer className="App-footer">
         <p>&copy; 2025 Find My Train. All rights reserved.</p>
