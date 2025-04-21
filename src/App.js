@@ -63,7 +63,7 @@ function App() {
         </div>
         
         <div className="app-image-container">
-          <img src="/app-screenshot.png" alt="Find My Train App Screenshot" className="app-screenshot" />
+          <img src="app-screenshot.png" alt="Find My Train App Screenshot" className="app-screenshot" />
         </div>
       </div>
       

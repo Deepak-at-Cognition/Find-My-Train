@@ -74,15 +74,15 @@ body {
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
+/* Option without background */
 .feature-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: rgba(56, 189, 248, 0.2);
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
   color: #38bdf8;
+  margin-top: 4px;
 }
 
 .feature-content h3 {
