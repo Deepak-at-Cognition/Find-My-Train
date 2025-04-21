@@ -4,6 +4,8 @@
   "description": "<!-- **Deepak-at-Cognition/Deepak-at-Cognition** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
