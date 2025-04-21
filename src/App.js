@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { ArrowRight, Search, Wifi, Ban, Sparkles, ChevronRight } from 'lucide-react';
 
 function App() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const totalSlides = 3;
+  
+  const handleDotClick = (index) => {
+    setActiveSlide(index);
+  };
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % totalSlides);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [totalSlides]);
+  
+  const getScreenshotClass = (index) => {
+    if (index === activeSlide) return "app-screenshot active";
+    if (index === (activeSlide + 1) % totalSlides) return "app-screenshot secondary";
+    if (index === (activeSlide + 2) % totalSlides) return "app-screenshot tertiary";
+    return "app-screenshot";
+  };
+  
   return (
     <div className="App">
       <div className="hero-section">
@@ -37,14 +59,30 @@ function App() {
         
         <div className="app-showcase-container">
           <div className="app-device">
-            <img src="images/app-screen-1.png" alt="Find My Train App Search Screen" className="app-screenshot active" />
-            <img src="images/app-screen-2.png" alt="Find My Train App Results Screen" className="app-screenshot secondary" />
-            <img src="images/app-screen-3.png" alt="Find My Train App Details Screen" className="app-screenshot tertiary" />
+            <img 
+              src="images/app-screen-1.png" 
+              alt="Find My Train App Search Screen" 
+              className={getScreenshotClass(0)} 
+            />
+            <img 
+              src="images/app-screen-2.png" 
+              alt="Find My Train App Results Screen" 
+              className={getScreenshotClass(1)} 
+            />
+            <img 
+              src="images/app-screen-3.png" 
+              alt="Find My Train App Details Screen" 
+              className={getScreenshotClass(2)} 
+            />
           </div>
           <div className="app-screens-nav">
-            <button className="screen-dot active"></button>
-            <button className="screen-dot"></button>
-            <button className="screen-dot"></button>
+            {[0, 1, 2].map((index) => (
+              <button 
+                key={index}
+                className={`screen-dot ${activeSlide === index ? 'active' : ''}`}
+                onClick={() => handleDotClick(index)}
+              ></button>
+            ))}
           </div>
         </div>
       </div>
