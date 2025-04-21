@@ -318,6 +318,15 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.disclaimer {
+  font-size: 0.8rem;
+  color: #475569;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 1024px) {
   .hero-section {
     flex-direction: column;
