@@ -1,14 +1,95 @@
 .App {
-  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #1a365d;
   color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.App-header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.App-main {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.trains-container h2 {
+  color: #1a365d;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.trains-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.trains-table th, 
+.trains-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.trains-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #1a365d;
+}
+
+.trains-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+.status-on-time {
+  color: #047857;
+}
+
+.status-delayed {
+  color: #d97706;
+}
+
+.status-cancelled {
+  color: #dc2626;
+}
+
+.App-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 10px;
 }
