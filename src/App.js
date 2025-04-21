@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { ArrowRight, Search, Wifi, Ban, Sparkles } from 'lucide-react';
+import { ArrowRight, Search, Wifi, Ban, Sparkles, ChevronRight } from 'lucide-react';
 
 function App() {
   return (
@@ -12,45 +12,18 @@ function App() {
             The smartest way to track trains without the hassle. No ads, just pure functionality.
           </p>
           
-          <div className="features-container">
-            <div className="feature-card">
-              <div className="feature-icon">
-                <Search size={24} />
-              </div>
-              <div className="feature-content">
-                <h3>Smart Search</h3>
-                <p>Find any train by name, number, or origin-destination stations in seconds.</p>
-              </div>
+          <div className="hero-features">
+            <div className="hero-feature">
+              <Ban size={28} className="hero-feature-icon" />
+              <span>Zero Ads</span>
             </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon">
-                <Wifi size={24} />
-              </div>
-              <div className="feature-content">
-                <h3>Offline Ready</h3>
-                <p>Access all information offline, except live status. Perfect for your journey.</p>
-              </div>
+            <div className="hero-feature">
+              <Wifi size={28} className="hero-feature-icon" />
+              <span>Offline Ready</span>
             </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon">
-                <Ban size={24} />
-              </div>
-              <div className="feature-content">
-                <h3>Zero Ads</h3>
-                <p>Absolutely no advertisements. Ever. We respect your time and attention.</p>
-              </div>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon">
-                <Sparkles size={24} />
-              </div>
-              <div className="feature-content">
-                <h3>Modern UI</h3>
-                <p>Sleek, intuitive design that makes finding train information a pleasure.</p>
-              </div>
+            <div className="hero-feature">
+              <Sparkles size={28} className="hero-feature-icon" />
+              <span>Modern UI</span>
             </div>
           </div>
           
@@ -62,8 +35,63 @@ function App() {
           </div>
         </div>
         
-        <div className="app-image-container">
-          <img src="app-screenshot.png" alt="Find My Train App Screenshot" className="app-screenshot" />
+        <div className="app-showcase-container">
+          <div className="app-device">
+            <img src="images/app-screen-1.png" alt="Find My Train App Search Screen" className="app-screenshot active" />
+            <img src="images/app-screen-2.png" alt="Find My Train App Results Screen" className="app-screenshot secondary" />
+            <img src="images/app-screen-3.png" alt="Find My Train App Details Screen" className="app-screenshot tertiary" />
+          </div>
+          <div className="app-screens-nav">
+            <button className="screen-dot active"></button>
+            <button className="screen-dot"></button>
+            <button className="screen-dot"></button>
+          </div>
+        </div>
+      </div>
+      
+      <div className="features-section">
+        <h2 className="section-title">Why Choose Find My Train?</h2>
+        
+        <div className="features-container">
+          <div className="feature-card">
+            <div className="feature-icon">
+              <Search size={24} />
+            </div>
+            <div className="feature-content">
+              <h3>Smart Search</h3>
+              <p>Find any train by name, number, or origin-destination stations in seconds.</p>
+            </div>
+          </div>
+          
+          <div className="feature-card">
+            <div className="feature-icon">
+              <Wifi size={24} />
+            </div>
+            <div className="feature-content">
+              <h3>Offline Ready</h3>
+              <p>Access all information offline, except live status. Perfect for your journey.</p>
+            </div>
+          </div>
+          
+          <div className="feature-card">
+            <div className="feature-icon">
+              <Ban size={24} />
+            </div>
+            <div className="feature-content">
+              <h3>Zero Ads</h3>
+              <p>Absolutely no advertisements. Ever. We respect your time and attention.</p>
+            </div>
+          </div>
+          
+          <div className="feature-card">
+            <div className="feature-icon">
+              <Sparkles size={24} />
+            </div>
+            <div className="feature-content">
+              <h3>Modern UI</h3>
+              <p>Sleek, intuitive design that makes finding train information a pleasure.</p>
+            </div>
+          </div>
         </div>
       </div>
       
