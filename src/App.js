@@ -88,7 +88,7 @@ function App() {
       </div>
       
       <div className="features-section">
-        <h2 className="section-title">Why Choose Find My Train?</h2>
+        <h2 className="section-title">Why Choose <span className="highlight-train">Find My Train</span>?</h2>
         
         <div className="features-container">
           <div className="feature-card">
@@ -133,24 +133,10 @@ function App() {
         </div>
       </div>
       
-      <div className="testimonial-section">
-        <div className="testimonial-container">
-          <h2>What Our Users Say</h2>
-          <div className="testimonials">
-            <div className="testimonial-card">
-              <p>"Finally, a train app without annoying ads! The offline feature is a lifesaver when I'm traveling through areas with poor connectivity."</p>
-              <p className="testimonial-author">- Rahul S.</p>
-            </div>
-            <div className="testimonial-card">
-              <p>"The UI is so clean and intuitive. I can find my train in seconds, and all the information I need is right there."</p>
-              <p className="testimonial-author">- Priya M.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+
       <footer className="App-footer">
         <p>&copy; 2025 Find My Train. All rights reserved.</p>
+        <p className="disclaimer">This application is not officially affiliated with Indian Railways or any entity of the Government of India. It is an independent service developed to assist travelers.</p>
       </footer>
     </div>
   );
