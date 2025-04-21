@@ -246,8 +246,8 @@ body {
 }
 
 .screen-dot {
-  width: 6px;
-  height: 6px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   border: none;
@@ -332,19 +332,19 @@ body {
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .app-showcase-container {
     order: -1;
   }
-  
+
   .features-container, .testimonials {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-features {
     flex-direction: column;
     align-items: flex-start;
