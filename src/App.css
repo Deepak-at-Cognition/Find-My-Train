@@ -217,7 +217,7 @@ body {
 
 .app-screenshot.active {
   opacity: 1;
-
+  margin-left: -40px;
   transform: perspective(1000px) rotateY(-10deg) translateZ(0);
   z-index: 3;
 }
@@ -225,6 +225,7 @@ body {
 .app-screenshot.secondary {
   opacity: 0.4;
   box-shadow: none;
+  margin-left: -20px;
   transform: perspective(1000px) rotateY(-10deg) translateZ(-30px) translateX(60px);
   z-index: 2;
 }
@@ -249,8 +250,8 @@ body {
 }
 
 .screen-dot {
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   border: none;
