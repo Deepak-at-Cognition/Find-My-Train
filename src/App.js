@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { ArrowRight, Search, Wifi, Ban, Sparkles, ChevronRight, Database } from 'lucide-react';
-import appScreen1 from './images/app-screen-1.png';
-import appScreen2 from './images/app-screen-2.png';
-import appScreen3 from './images/app-screen-3.png';
 
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -63,17 +60,17 @@ function App() {
         <div className="app-showcase-container">
           <div className="app-device">
             <img 
-              src={appScreen1} 
+              src="./images/app-screen-1.png" 
               alt="Find My Train App Search Screen" 
               className={getScreenshotClass(0)} 
             />
             <img 
-              src={appScreen2} 
+              src="./images/app-screen-2.png" 
               alt="Find My Train App Results Screen" 
               className={getScreenshotClass(1)} 
             />
             <img 
-              src={appScreen3} 
+              src="./images/app-screen-3.png" 
               alt="Find My Train App Details Screen" 
               className={getScreenshotClass(2)} 
             />
