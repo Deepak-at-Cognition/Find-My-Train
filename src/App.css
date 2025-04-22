@@ -381,6 +381,15 @@ body {
     justify-content: center;
   }
 
+  .hero-section {
+    flex-direction: column;
+  }
+  
+  .app-showcase-container {
+    order: 1;
+    margin-top: 30px;
+  }
+
   .app-device {
     width: 250px;
     height: 520px;
@@ -393,10 +402,6 @@ body {
 
   .features-section {
     margin-bottom: 60px;
-  }
-  
-  .app-showcase-container {
-    display: none;
   }
 }
 
