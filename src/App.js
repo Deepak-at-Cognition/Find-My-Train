@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { ArrowRight, Search, Wifi, Ban, Sparkles, ChevronRight } from 'lucide-react';
+import { ArrowRight, Search, Wifi, Ban, Sparkles, ChevronRight, Database } from 'lucide-react';
 
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -133,6 +133,62 @@ function App() {
         </div>
       </div>
       
+      <div className="api-section">
+        <h2 className="section-title">Developer <span className="highlight-api">API Access</span></h2>
+        <p className="api-subtitle">Integrate powerful train data into your applications with our reliable API</p>
+        
+        <div className="api-cards-container">
+          <div className="api-card">
+            <div className="api-card-icon">
+              <Wifi size={24} />
+            </div>
+            <div className="api-card-content">
+              <h3>Live Train Status</h3>
+              <p>Real-time updates on train locations, delays, and platform information with high accuracy.</p>
+            </div>
+          </div>
+          
+          <div className="api-card">
+            <div className="api-card-icon">
+              <Search size={24} />
+            </div>
+            <div className="api-card-content">
+              <h3>Autocomplete &amp; Search</h3>
+              <p>Powerful search APIs for train names, numbers, and stations with smart autocomplete functionality.</p>
+            </div>
+          </div>
+          
+          <div className="api-card">
+            <div className="api-card-icon">
+              <ChevronRight size={24} />
+            </div>
+            <div className="api-card-content">
+              <h3>Route Finder</h3>
+              <p>Find optimal routes between stations based on connection wait times, distance, and journey duration.</p>
+            </div>
+          </div>
+          
+          <div className="api-card">
+            <div className="api-card-icon">
+              <Database size={24} />
+            </div>
+            <div className="api-card-content">
+              <h3>Historical Data</h3>
+              <p>Access historical performance data for trains, including punctuality statistics and seasonal trends.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="api-subscription">
+          <div className="api-subscription-content">
+            <h3>Ready to integrate train data?</h3>
+            <p>Our API offers flexible monthly subscription plans for businesses of all sizes.</p>
+            <button className="api-cta-button">
+              Talk to Sales <ArrowRight size={16} className="arrow-icon" />
+            </button>
+          </div>
+        </div>
+      </div>
 
       <footer className="App-footer">
         <p>&copy; 2025 Find My Train. All rights reserved.</p>
