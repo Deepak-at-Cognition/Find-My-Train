@@ -60,17 +60,17 @@ function App() {
         <div className="app-showcase-container">
           <div className="app-device">
             <img 
-              src="images/app-screen-1.png" 
+              src="/images/app-screen-1.png" 
               alt="Find My Train App Search Screen" 
               className={getScreenshotClass(0)} 
             />
             <img 
-              src="images/app-screen-2.png" 
+              src="/images/app-screen-2.png" 
               alt="Find My Train App Results Screen" 
               className={getScreenshotClass(1)} 
             />
             <img 
-              src="images/app-screen-3.png" 
+              src="/images/app-screen-3.png" 
               alt="Find My Train App Details Screen" 
               className={getScreenshotClass(2)} 
             />
