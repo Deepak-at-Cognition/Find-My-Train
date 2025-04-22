@@ -100,7 +100,7 @@ body {
 
 .features-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 40px;
 }
@@ -337,10 +337,6 @@ body {
     gap: 40px;
   }
 
-  .app-showcase-container {
-    order: -1;
-  }
-
   .features-container, .testimonials {
     grid-template-columns: 1fr;
   }
@@ -397,6 +393,10 @@ body {
 
   .features-section {
     margin-bottom: 60px;
+  }
+  
+  .app-showcase-container {
+    display: none;
   }
 }
 
