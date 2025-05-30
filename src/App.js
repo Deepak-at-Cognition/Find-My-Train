@@ -191,7 +191,7 @@ function App() {
       </div>
 
       <footer className="App-footer">
-        <p>&copy; 2025 Find My Train. All rights reserved.</p>
+        <p>&copy; 2025-2026 Find My Train. All rights reserved.</p>
         <p className="disclaimer">This application is not officially affiliated with Indian Railways or any entity of the Government of India. It is an independent service developed to assist travelers.</p>
       </footer>
     </div>
